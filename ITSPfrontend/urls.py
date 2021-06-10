@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from ITSPfrontend import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     
@@ -23,3 +24,4 @@ urlpatterns = [
     path('Info/', views.Info_list),
     path('Info/<int:pk>/', views.Info_detail),    
 ]
+urlpatterns = format_suffix_patterns(urlpatterns)
