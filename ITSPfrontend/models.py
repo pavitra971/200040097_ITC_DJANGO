@@ -15,7 +15,7 @@ class Info(models.Model):
    member2email = models.CharField(max_length=122, blank=True,null=True)
    member3name = models.CharField(max_length=122, blank=True,null=True)
    member3phoneno = models.CharField(max_length=12, blank=True,null=True)
-   member3email = models.CharField(max_length=122, blank=True,null=True)
+   member3email = models.CharField(max_length=122, blank=True)
    
 
    def __str__(self):
