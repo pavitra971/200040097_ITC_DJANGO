@@ -1,0 +1,286 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ITSP</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+  <link href="{% static 'themes/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'themes/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  
+  <link href="{% static 'themes/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'themes/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'themes/vendor/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
+  <link href="{% static 'themes/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'themes/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  
+  <link href="{% static 'themes/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+
+<header id="header" class="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="/"><span>◯</span>Info</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/">Home</a></li>
+
+          
+            <li class="menu-has-children"><a href="">Team</a>
+            <ul>
+              <li><a href="/ITS21001">Technologic</a></li>
+              <li><a href="/ITS21002">HORIZON</a></li>
+              <li><a href="/ITS21003">Team Inception</a></li>
+              <li><a href="/ITS21004">VASU</a></li>
+              <li><a href="/ITS21005">InstiFit</a></li>
+              <li><a href="/ITS21006">Poseidon</a></li>
+              <li><a href="/ITS21007">Apollonox</a></li>
+              <li><a href="/ITS21008">Airperks</a></li>
+              <li><a href="/ITS21009">Aeromaniacs</a></li>
+              <li><a href="/ITS21010">SumSquad</a></li>
+              <li><a href="/ITS31001">Greenfire</a></li>
+              <li><a href="/ITS31002">TechnoBuddie</a></li>
+            </ul>
+
+
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+
+<section id="contact" class="padd-section">
+
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Register</h2>
+          <p class="separator">give your Team's detailed information here!!</p>
+        </div>
+
+        <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-geo-alt"></i>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="fa fa-envelope"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+          
+                   
+            <div class="container">
+              <form action="/info" method="post"  >
+              {% csrf_token %}
+
+                <div class="form-group">
+                  
+                  <input type="teamname" name="teamname" class="form-control" id="teamname" placeholder="Team name:" required="">
+                </div> 
+                <div class="form-group">
+                  
+                  <input type="teamid" name="teamid" class="form-control" id="teamid" placeholder="Team ID:" required="">
+                </div>            
+                <div class="form-group">
+                  <input type="teamleadername" name="teamleadername" class="form-control" id="teamleadername" placeholder="Team leader name:" required="">
+                </div>
+                <div class="form-group">
+                  <input type="teamleaderphoneno" name="teamleaderphoneno" class="form-control" id="teamleaderphoneno" placeholder="Team leader phoneno" required="">
+                </div>
+                <div class="form-group">
+                  <input type="teamleaderemail" name="teamleaderemail" class="form-control" id="teamleaderemail" placeholder="Team leader email" required="">
+                </div>
+                <div class="form-group">
+                  <input type="member1name" name="member1name" class="form-control" id="member1name" placeholder="Member-1 name" required="">
+                </div>
+                <div class="form-group">
+                  <input type="member1phoneno" name="member1phoneno" class="form-control" id="member1phoneno" placeholder="Member-1 phoneno" required="">
+                </div>
+                <div class="form-group">
+                  <input type="member1email" name="member1email" class="form-control" id="member1email" placeholder="Member-1 email" required="">
+                </div>
+                <div class="form-group">
+                  <input type="member2name" name="memeber2name" class="form-control" id="memebername" placeholder="Member-2 name" required="">
+                </div>
+                <div class="form-group">
+                  <input type="member2phoneno" name="member2phoneno" class="form-control" id="member2phoneno" placeholder="Member-2 phoneno" required="">
+                </div>
+                <div class="form-group">
+                  <input type="member2email" name="member2email" class="form-control" id="member2email" placeholder="Member-2 email" required="">
+                </div>
+
+                <div class="form-group mt-3">
+                  <input type="member3name" class="form-control" name="member3name" id="member3name" placeholder="Member-3 name" required="">
+                </div>
+                <div class="form-group mt-3">
+                  <input type="member3phoneno" class="form-control" name="member3phoneno" id="member3phoneno" placeholder="Member-3 phoneno" required="">
+                </div>
+                <div class="form-group mt-3">
+                  <input type="member3email" class="form-control" name="member3email" id="member3email" placeholder="Member-3 email" required="">
+                </div>
+                
+
+                <div class="text-center"><button type="submit">Submit</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">ITSP</a>
+            <p>Feel free to contact the mentors and soon we will be realasing our selection critera and a detalied list of the mentors and the details about review meets and all the following .</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Support</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">faq</a></li>
+              <li><a href="#">Editor help</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights ITSP. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+        -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'themes/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'themes/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'themes/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'themes/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'themes/vendor/modal-video/js/modal-video.min.js' %}"></script>
+  <script src="{% static 'themes/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'themes/vendor/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'themes/vendor/hoverIntent/hoverIntent.js' %}"></script>
+  <script src="{% static 'themes/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'themes/js/main.js' %}"></script>
+
+</body>
+
+</html>

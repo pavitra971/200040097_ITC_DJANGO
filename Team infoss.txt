@@ -1,0 +1,22 @@
+/ITS21001 -Technologic
+/ITS21002-HORIZON
+/ITS21003-Team Inception
+/ITS21004-VASU
+/ITS21005-InstiFit
+/ITS21006-Poseidon
+/ITS21007-Apollonox
+/ITS21008-Airperks
+/ITS21009-Aeromaniacs
+/ITS21010-SumSquad
+
+/ITS31001-Greenfire
+/ITS31002-TechnoBuddie
+/ITS31003-EmotiQuad
+/ITS31004-Waste Eliminator
+/ITS31005-ELECTRIGEEKS
+/ITS31006-Team Kaizen
+/ITS31007-Scar Burberzuck
+/ITS31008-Brainiacs' buzz
+/ITS31009-KITA
+/ITS31010-Kyojin
+/ITS31011-Team Sudarshan
