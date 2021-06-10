@@ -1,6 +1,15 @@
 
 from django.shortcuts import render
-from ITSPfrontend.models import Info
+from django.http import  HttpResponse,JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import JSONParser
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .models import Info
+from .serializers import InfoSerializer
+from rest_framework import viewsets
+
 
 # Create your views here.
 
@@ -80,19 +89,46 @@ def info(request):
     return render(request,'info.html')   
 
 
+@csrf_exempt
+def Info_list(request):
+   
+    if request.method == 'GET':
+        Info = info.objects.all()
+        serializer = InfoSerializer(Info, many=True)
+        return JsonResponse(Info.data, safe=False)
+
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = InfoSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
 
 
+@csrf_exempt
+def Info_detail(request, pk):
+   
+    try:
+        Info = info.objects.get(pk=pk)
+    except info.DoesNotExist:
+        return HttpResponse(status=404)
 
+    if request.method == 'GET':
+        serializer = InfoSerializer(Info)
+        return JsonResponse(serializer.data)
 
+    elif request.method == 'PUT':
+        data = JSONParser().parse(request)
+        serializer = InfoSerializer(Info, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        return JsonResponse(serializer.errors, status=400)
 
-
-
-
-
-
-
-
-
+    elif request.method == 'DELETE':
+        Info.delete()
+        return HttpResponse(status=204)
 
 
 

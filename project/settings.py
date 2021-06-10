@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'ITSPfrontend.apps.ITSPfrontendConfig',
     'django.contrib.admin',
     'django.contrib.auth',

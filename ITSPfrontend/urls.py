@@ -20,5 +20,6 @@ urlpatterns = [
     path("ITS31001", views.ITS31001,name='ITS31001'),
     path("ITS31002", views.ITS31002,name='ITS31002'),
     path("info", views.info,name='info'),
-    
+    path('Info/', views.Info_list),
+    path('Info/<int:pk>/', views.Info_detail),    
 ]
